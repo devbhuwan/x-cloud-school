@@ -1,5 +1,5 @@
 {
-  "name": "xcs-core",
+  "name": "@xcs/xcs-core",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
