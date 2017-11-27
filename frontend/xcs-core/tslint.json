@@ -124,7 +124,7 @@
     "component-selector": [
       true,
       "element",
-      "app",
+      "xcs",
       "kebab-case"
     ],
     "angular-whitespace": [true, "check-interpolation"],

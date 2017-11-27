@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="validateConfig(gridConfig); else gridConfigNotValid">
+    <table>
+      <thead>
+
+      </thead>
+      <tbody>
+
+      </tbody>
+      <tfoot>
+
+      </tfoot>
+    </table>
+  </div>
+  <ng-template #gridConfigNotValid>
+    hello
+  </ng-template>
+</div>

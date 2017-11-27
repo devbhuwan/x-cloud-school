@@ -4,9 +4,11 @@ import {NbAuthModule, NbDummyAuthProvider} from '@nebular/auth';
 
 import {throwIfAlreadyLoaded} from './module-import-guard';
 import {DataModule} from './data/data.module';
+import {LoggerModule} from './logger/logger.module';
 
 const NB_CORE_PROVIDERS = [
   ...DataModule.forRoot().providers,
+  ...LoggerModule.forRoot().providers,
   ...NbAuthModule.forRoot({
     providers: {
       email: {

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GridViewComponent } from './grid-view.component';
+import { BasicNotificationComponent } from './basic-notification.component';
 
-describe('GridViewComponent', () => {
-  let component: GridViewComponent;
-  let fixture: ComponentFixture<GridViewComponent>;
+describe('BasicNotificationComponent', () => {
+  let component: BasicNotificationComponent;
+  let fixture: ComponentFixture<BasicNotificationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GridViewComponent ]
+      declarations: [ BasicNotificationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GridViewComponent);
+    fixture = TestBed.createComponent(BasicNotificationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
