@@ -19,6 +19,7 @@ import {
 
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
+import { TwoColumnComponent } from './layouts/two-column/two-column.component';
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -37,6 +38,7 @@ const NB_MODULES = [
 ];
 
 const COMPONENTS = [
+  TwoColumnComponent
 ];
 
 const PIPES = [
