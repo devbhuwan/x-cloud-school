@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {GridViewComponent} from './grid-view/grid-view.component';
+import {GridViewComponent} from './@core/grid-view/grid-view.component';
 
 export const EXPORT_COMPONENTS = [GridViewComponent];
 
