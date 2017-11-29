@@ -1,0 +1,15 @@
+ext {
+    versions = [:]
+    libs = [:]
+}
+versions += [
+        scala: "2.11",
+        spark: "2.2.0"
+]
+
+libs += [
+        openCsv   : "net.sf.opencsv:opencsv:2.3",
+        scala     : "org.scala-lang:scala-library:$versions.scala.5",
+        sparkMlLib: "org.apache.spark:spark-mllib_$versions.scala:$versions.spark",
+        testNG    : "org.testng:testng:6.9.4"
+]

@@ -1,0 +1,15 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "se.transmode.gradle:gradle-docker:1.2"
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.9.0"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+    }
+
+}
