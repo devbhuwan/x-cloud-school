@@ -1,8 +1,6 @@
-apply plugin: 'wildfly-swarm'
-
 dependencies {
     compile([
-            libs.keycloakServer
+            //libs.springBootStarterWeb
     ])
 
     compileOnly([
