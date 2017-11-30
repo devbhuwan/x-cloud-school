@@ -12,7 +12,7 @@ buildscript {
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE'
         classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
-        classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0-SNAPSHOT"
+        classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
     }
 
 }
@@ -29,7 +29,10 @@ allprojects {
         mavenCentral()
         mavenLocal()
         jcenter()
-        repos.each { repoUrl -> maven { url repoUrl } }
+        maven {
+           url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/"
+        }
+        // repos.each { repoUrl -> maven { url repoUrl } }
     }
 }
 

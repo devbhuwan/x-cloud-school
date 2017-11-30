@@ -15,7 +15,7 @@ libs += [
         testNG    : "org.testng:testng:6.9.4",
         keycloakSpringBoot : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot",
         springBootStarterWeb: "org.springframework.boot:spring-boot-starter-web",
-        keycloakServer: "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
+        keycloakServer: "org.wildfly.swarm:keycloak-server:2017.11.0",
         springBootStarter: "org.springframework.boot:spring-boot-starter"
 
 ]
