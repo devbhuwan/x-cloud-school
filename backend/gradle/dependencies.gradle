@@ -10,13 +10,16 @@ versions += [
 ]
 
 libs += [
-        openCsv             : "net.sf.opencsv:opencsv:2.3",
-        scala               : "org.scala-lang:scala-library:$versions.scala.5",
-        sparkMlLib          : "org.apache.spark:spark-mllib_$versions.scala:$versions.spark",
-        testNG              : "org.testng:testng:6.9.4",
-        keycloakSpringBoot  : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot",
-        springBootStarterWeb: "org.springframework.boot:spring-boot-starter-web",
-        keycloakServer      : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
-        springBootStarter   : "org.springframework.boot:spring-boot-starter",
-        lombok              : "org.projectlombok:lombok:$versions.lombok"
+        openCsv                         : "net.sf.opencsv:opencsv:2.3",
+        scala                           : "org.scala-lang:scala-library:$versions.scala.5",
+        sparkMlLib                      : "org.apache.spark:spark-mllib_$versions.scala:$versions.spark",
+        testNG                          : "org.testng:testng:6.9.4",
+        keycloakSpringBoot              : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot",
+        springBootStarterWeb            : "org.springframework.boot:spring-boot-starter-web",
+        springBootAutoConfigure         : "org.springframework.boot:spring-boot-autoconfigure",
+        springBootConfigurationProcessor: "org.springframework.boot:spring-boot-configuration-processor",
+        keycloakServer                  : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
+        springBootStarter               : "org.springframework.boot:spring-boot-starter",
+        lombok                          : "org.projectlombok:lombok:$versions.lombok",
+        keycloakSpringBootStarter       : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot"
 ]

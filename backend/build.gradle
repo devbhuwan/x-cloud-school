@@ -7,13 +7,16 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        maven {
+            url "http://repo.spring.io/milestone/"
+        }
     }
 
     dependencies {
         classpath "se.transmode.gradle:gradle-docker:1.2"
         classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.9.0"
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE'
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M6"
         classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
         classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.13"
@@ -35,6 +38,9 @@ allprojects {
         jcenter()
         maven {
             url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/"
+        }
+        maven {
+            url "http://repo.spring.io/milestone/"
         }
         // repos.each { repoUrl -> maven { url repoUrl } }
     }
@@ -80,6 +86,12 @@ subprojects {
         ])
     }
 
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-starter-parent:2.0.0.M6"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR7"
+        }
+    }
 
     apply from: file("$rootDir/gradle/publishing.gradle")
 }
