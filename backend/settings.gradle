@@ -1,4 +1,6 @@
 rootProject.name = 'backend-x-cloud-school'
 include 'security:cloud-uaa-service-keycloak'
 findProject(':security:cloud-uaa-service-keycloak')?.name = 'cloud-uaa-service-keycloak'
+include 'school:school-profile'
+findProject(':school:school-profile')?.name = 'school-profile'
 

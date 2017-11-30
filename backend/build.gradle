@@ -13,6 +13,7 @@ buildscript {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE'
         classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
         classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.13"
     }
 
 }
@@ -30,7 +31,7 @@ allprojects {
         mavenLocal()
         jcenter()
         maven {
-           url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/"
+            url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/"
         }
         // repos.each { repoUrl -> maven { url repoUrl } }
     }
@@ -59,15 +60,16 @@ subprojects {
 
     dependencies {
         compile([
+                libs.lombok
         ])
 
         compileOnly([
 
         ])
 
-//        apt([
-//
-//        ])
+        apt([
+                libs.lombok
+        ])
 
         testCompile([
                 libs.testNG

@@ -1,0 +1,18 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile([
+            libs.springBootStarterWeb
+    ])
+
+    compileOnly([
+
+    ])
+
+//        apt([
+//
+//        ])
+
+    testCompile([
+    ])
+}
