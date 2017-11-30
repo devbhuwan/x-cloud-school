@@ -1,4 +1,21 @@
-buildscript { apply from: file('gradle/buildscript.gradle'), to: buildscript }
+buildscript {
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "se.transmode.gradle:gradle-docker:1.2"
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.9.0"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE'
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
+        classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0-SNAPSHOT"
+    }
+
+}
 
 apply from: "$rootDir/gradle/repositories.gradle"
 apply from: "$rootDir/gradle/dependencies.gradle"
@@ -23,6 +40,7 @@ subprojects {
     apply plugin: 'findbugs'
     apply plugin: 'project-report'
     apply plugin: 'signing'
+    apply plugin: 'io.spring.dependency-management'
 
     sourceCompatibility = 1.8
 

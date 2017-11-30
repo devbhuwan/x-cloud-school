@@ -1,0 +1,21 @@
+
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile([
+            libs.keycloakServer,
+            libs.springBootStarterWeb
+    ])
+
+    compileOnly([
+
+    ])
+
+//        apt([
+//
+//        ])
+
+    testCompile([
+            libs.testNG
+    ])
+}
