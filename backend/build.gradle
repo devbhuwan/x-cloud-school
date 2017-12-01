@@ -20,6 +20,7 @@ buildscript {
         classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
         classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.13"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
     }
 
 }
@@ -27,6 +28,9 @@ buildscript {
 apply from: "$rootDir/gradle/repositories.gradle"
 apply from: "$rootDir/gradle/dependencies.gradle"
 apply from: "$rootDir/gradle/artifacts.gradle"
+
+ext.junitPlatformVersion = '1.0.2'
+ext.junitJupiterVersion  = '5.0.2'
 
 allprojects {
     apply plugin: "idea"
@@ -55,6 +59,7 @@ subprojects {
     apply plugin: 'signing'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: "net.ltgt.apt"
+    apply plugin: 'org.junit.platform.gradle.plugin'
 
     sourceCompatibility = 1.8
 
@@ -84,6 +89,10 @@ subprojects {
         testCompile([
                 libs.testNG
         ])
+        testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+        testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+        testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+        testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
     }
 
     dependencyManagement {
