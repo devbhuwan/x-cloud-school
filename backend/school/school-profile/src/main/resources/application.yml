@@ -1,2 +1,3 @@
-keycloak:
-  enable-basic-auth: false
+spring:
+  application:
+    name: school-profile

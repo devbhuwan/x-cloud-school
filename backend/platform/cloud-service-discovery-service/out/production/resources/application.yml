@@ -1,0 +1,2 @@
+keycloak:
+  enable-basic-auth: false
