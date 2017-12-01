@@ -1,0 +1,4 @@
+keycloak-server:
+  image: jboss/keycloak
+  ports:
+    - 18080:8080
