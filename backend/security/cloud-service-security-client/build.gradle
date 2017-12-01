@@ -1,6 +1,5 @@
 dependencies {
     compile([
-            libs.keycloakSpringBootStarter,
             libs.springBootAutoConfigure
     ])
 
