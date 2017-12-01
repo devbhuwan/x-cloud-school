@@ -5,10 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudApiGatewayApplication {
+public class CloudApiGatewayServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudApiGatewayApplication.class, args);
+        SpringApplication.run(CloudApiGatewayServiceApplication.class, args);
     }
 
 }
