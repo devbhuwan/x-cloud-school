@@ -1,0 +1,21 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile([
+            libs.springBootStarterWeb,
+            libs.springBootStarterTest,
+            project(":security:cloud-service-security-client")
+    ])
+
+    compileOnly([
+
+    ])
+
+
+//        apt([
+//
+//        ])
+
+    testCompile([
+    ])
+}

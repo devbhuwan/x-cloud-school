@@ -5,4 +5,6 @@ include 'security:cloud-service-security-client'
 findProject(':security:cloud-service-security-client')?.name = 'cloud-service-security-client'
 include 'school:school-profile'
 findProject(':school:school-profile')?.name = 'school-profile'
+include 'platform:cloud-api-gateway'
+findProject(':platform:cloud-api-gateway')?.name = 'cloud-api-gateway'
 
