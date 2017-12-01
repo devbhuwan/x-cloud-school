@@ -4,7 +4,6 @@ dependencies {
     compile([
             libs.keycloakServer
     ])
-
     compileOnly([
 
     ])
@@ -15,4 +14,9 @@ dependencies {
 
     testCompile([
     ])
+}
+
+task runJar(type: Exec, dependsOn: [build]) {
+    executable "java"
+    args "-jar", "${buildDir}/libs/${project.name}-swarm.jar"
 }
