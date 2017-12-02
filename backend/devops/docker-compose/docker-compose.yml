@@ -1,2 +1,6 @@
 cloud-api-gateway-service:
   image: io.github.devbhuwan/cloud-api-gateway-service
+cloud-service-discovery-service:
+  image: io.github.devbhuwan/cloud-service-discovery-service
+school-profile:
+  image: io.github.devbhuwan/school-profile
