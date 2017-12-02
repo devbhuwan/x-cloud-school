@@ -69,7 +69,8 @@ subprojects {
 
     dependencies {
         compile([
-                libs.lombok
+                libs.lombok,
+                "org.slf4j:slf4j-api"
         ])
 
         compileOnly([
