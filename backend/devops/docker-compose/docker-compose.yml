@@ -1,0 +1,2 @@
+cloud-api-gateway-service:
+  image: io.github.devbhuwan/cloud-api-gateway-service

@@ -1,5 +1,11 @@
 apply plugin: 'com.palantir.docker'
 
+task copyDockerfile(type: Copy, dependsOn: [dockerPrepare]) {
+    description 'Copies the docker resource directory to the target directory.'
+    from file("$projectDir/src/docker")
+    into file("${buildDir}/docker")
+}
+
 docker {
     name "${project.group}/${jar.baseName}"
     files jar.archivePath

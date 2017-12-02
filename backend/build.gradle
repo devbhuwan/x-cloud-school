@@ -47,10 +47,10 @@ allprojects {
 subprojects {
     apply plugin: "java"
     apply plugin: "maven"
-    apply plugin: "maven-publish"
-    // apply plugin: 'findbugs'
-    apply plugin: 'project-report'
-    apply plugin: 'signing'
+//    apply plugin: "maven-publish"
+//    // apply plugin: 'findbugs'
+//    apply plugin: 'project-report'
+//    apply plugin: 'signing'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: "net.ltgt.apt"
     apply plugin: 'org.junit.platform.gradle.plugin'
@@ -97,7 +97,7 @@ subprojects {
         }
     }
 
-    apply from: file("$rootDir/gradle/publishing.gradle")
+//    apply from: file("$rootDir/gradle/publishing.gradle")
 }
 
 // apply from: file("$rootDir/gradle/code-coverage.gradle")

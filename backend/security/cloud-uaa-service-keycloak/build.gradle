@@ -1,9 +1,9 @@
-apply plugin: 'wildfly-swarm'
-apply from: "$rootDir/gradle/docker.gradle"
+//apply plugin: 'wildfly-swarm'
+//apply from: "$rootDir/gradle/docker.gradle"
 
 dependencies {
     compile([
-            libs.keycloakServer
+//            libs.keycloakServer
     ])
     compileOnly([
 
