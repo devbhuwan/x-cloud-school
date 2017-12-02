@@ -1,2 +1,5 @@
-keycloak:
-  enable-basic-auth: false
+spring:
+  application:
+    name: cloud-service-discovery-service
+server:
+  port: 8761

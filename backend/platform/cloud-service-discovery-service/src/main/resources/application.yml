@@ -1,3 +1,5 @@
 spring:
   application:
-    name: ccloud-service-discovery-service
+    name: cloud-service-discovery-service
+server:
+  port: 8761

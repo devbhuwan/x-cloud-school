@@ -5,7 +5,7 @@ dependencies {
             libs.springBootStarterTest,
             project(":security:cloud-service-security-client"),
             "org.springframework.cloud:spring-cloud-starter-config",
-            "org.springframework.cloud:spring-cloud-starter-eureka-server"
+            "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server"
     ])
 
     compileOnly([

@@ -1,8 +1,11 @@
-
 ext {
     repos = [:]
 }
 
 repos += [
-        jboss: "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/"
+        jboss             : "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/",
+        springLibMilestone: "https://repo.spring.io/libs-milestone",
+        springMilestone   : "http://repo.spring.io/milestone/",
+        springLibSnapshots: "https://repo.spring.io/libs-snapshot",
+        gradlePlugin      : "https://plugins.gradle.org/m2/"
 ]
