@@ -1,3 +1,5 @@
 spring:
   application:
     name: cloud-api-gateway-service
+server:
+  port: 8484
