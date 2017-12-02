@@ -1,0 +1,7 @@
+apply plugin: 'com.palantir.docker'
+
+docker {
+    name "${project.group}/${jar.baseName}"
+    files jar.archivePath
+    buildArgs(['JAR_FILE': "${jar.archiveName}"])
+}

@@ -1,5 +1,5 @@
 apply plugin: 'wildfly-swarm'
-apply plugin: 'docker'
+apply from: "$rootDir/gradle/docker.gradle"
 
 dependencies {
     compile([
@@ -15,16 +15,4 @@ dependencies {
 
     testCompile([
     ])
-}
-
-docker {
-    baseImage "ubuntu"
-    maintainer 'Bhuwan Upadhyay "me@developerbhuwan.com"'
-}
-
-task nginxDocker(type: Docker) {
-    applicationName = "nginx"
-    runCommand 'echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list'
-    runCommand "apt-get update"
-    runCommand "apt-get install -y inotify-tools nginx apache2 openssh-server"
 }

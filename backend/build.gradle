@@ -14,7 +14,6 @@ buildscript {
     }
 
     dependencies {
-        classpath "se.transmode.gradle:gradle-docker:1.2"
         classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.9.0"
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
@@ -22,6 +21,7 @@ buildscript {
         classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.13"
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
+        classpath 'gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0'
     }
 
 }
