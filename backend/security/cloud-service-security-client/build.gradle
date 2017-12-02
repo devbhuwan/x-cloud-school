@@ -1,6 +1,7 @@
 dependencies {
     compile([
-            libs.springBootAutoConfigure
+            libs.springBootAutoConfigure,
+            project(":archx:security-archx")
     ])
 
     compileOnly([
