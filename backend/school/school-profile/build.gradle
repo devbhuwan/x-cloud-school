@@ -1,4 +1,5 @@
 apply plugin: 'org.springframework.boot'
+apply from: "$rootDir/gradle/docker.gradle"
 
 dependencies {
     compile([
