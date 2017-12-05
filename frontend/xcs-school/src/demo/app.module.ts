@@ -7,7 +7,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { NbAuthModule } from '@nebular/auth';
+import {NbAuthModule} from '@nebular/auth';
+import {SecurityModule} from 'xcs-core';
+import {SchoolPagesModule} from '../app/pages/school-pages.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,11 @@ import { NbAuthModule } from '@nebular/auth';
     HttpClientModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    NbAuthModule.forRoot()
+    NbAuthModule.forRoot(),
+    SecurityModule.forRoot(),
+    SchoolPagesModule.forRoot()
   ],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

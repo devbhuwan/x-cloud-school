@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 
 import {PagesComponent} from './pages.component';
 import {PagesRoutingModule} from './pages-routing.module';
+import {CommonModule} from '@angular/common';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -9,7 +10,8 @@ const PAGES_COMPONENTS = [
 
 @NgModule({
   imports: [
-    PagesRoutingModule
+    CommonModule,
+    PagesRoutingModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS
