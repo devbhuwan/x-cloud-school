@@ -1,11 +1,13 @@
 {
-  "name": "@xcs/xcs-school",
+  "name": "xcs-school",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng-packagr -p ng-package.json",
+    "build": "npm run build:pack && npm run build:copy",
+    "build:pack": "ng-packagr -p ng-package.json",
+    "build:copy": "grunt copy src/assets dist/assets",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
