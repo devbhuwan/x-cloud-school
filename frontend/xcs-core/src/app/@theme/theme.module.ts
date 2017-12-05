@@ -17,9 +17,23 @@ import {
   NbCheckboxModule,
 } from '@nebular/theme';
 
+import {
+  FooterComponent,
+  HeaderComponent,
+  SearchInputComponent,
+  ThemeSettingsComponent,
+  ThemeSwitcherComponent,
+  TinyMCEComponent,
+} from './components';
+import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
+import {
+  OneColumnLayoutComponent,
+  SampleLayoutComponent,
+  ThreeColumnsLayoutComponent,
+  TwoColumnsLayoutComponent,
+} from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
-import { TwoColumnComponent } from './layouts/two-column/two-column.component';
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -38,10 +52,23 @@ const NB_MODULES = [
 ];
 
 const COMPONENTS = [
-  TwoColumnComponent
+  ThemeSwitcherComponent,
+  HeaderComponent,
+  FooterComponent,
+  SearchInputComponent,
+  ThemeSettingsComponent,
+  TinyMCEComponent,
+  OneColumnLayoutComponent,
+  SampleLayoutComponent,
+  ThreeColumnsLayoutComponent,
+  TwoColumnsLayoutComponent,
 ];
 
 const PIPES = [
+  CapitalizePipe,
+  PluralPipe,
+  RoundPipe,
+  TimingPipe,
 ];
 
 const NB_THEME_PROVIDERS = [

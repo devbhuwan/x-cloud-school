@@ -1,7 +1,14 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {StateService} from './state.service';
+import {UserService} from './users.service';
+import {AnalyticsService} from '../utils/analytics.service';
 
-const SERVICES = [];
+const SERVICES = [
+  StateService,
+  UserService,
+  AnalyticsService
+];
 
 @NgModule({
   imports: [
