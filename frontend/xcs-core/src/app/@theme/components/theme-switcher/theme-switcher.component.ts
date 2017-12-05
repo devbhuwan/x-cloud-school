@@ -4,7 +4,7 @@ import { NbJSThemeOptions } from '@nebular/theme/services/js-themes/theme.option
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 
 @Component({
-  selector: 'ngx-theme-switcher',
+  selector: 'xcs-theme-switcher',
   styleUrls: ['./theme-switcher.component.scss'],
   template: `
     <label class="theme-switch">

@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'xcs-pages',
   template: `
-    <ngx-sample-layout>
+    <xcs-sample-layout>
       <nb-menu [items]="menu"></nb-menu>
       <router-outlet></router-outlet>
-    </ngx-sample-layout>
+    </xcs-sample-layout>
   `
 })
 export class PagesComponent implements OnInit {

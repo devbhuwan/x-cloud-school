@@ -5,7 +5,7 @@ import { UserService } from '../../../@core/data/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 
 @Component({
-  selector: 'ngx-header',
+  selector: 'xcs-header',
   styleUrls: ['./header.component.scss'],
   templateUrl: './header.component.html',
 })

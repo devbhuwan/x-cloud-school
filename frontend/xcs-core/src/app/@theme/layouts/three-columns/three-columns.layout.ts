@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 
 // TODO: move layouts into the framework
 @Component({
-  selector: 'ngx-three-columns-layout',
+  selector: 'xcs-three-columns-layout',
   styleUrls: ['./three-columns.layout.scss'],
   template: `
     <nb-layout>
       <nb-layout-header fixed>
-        <ngx-header></ngx-header>
+        <xcs-header></xcs-header>
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive >
@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
       </nb-layout-column>
 
       <nb-layout-footer fixed>
-        <ngx-footer></ngx-footer>
+        <xcs-footer></xcs-footer>
       </nb-layout-footer>
     </nb-layout>
   `,

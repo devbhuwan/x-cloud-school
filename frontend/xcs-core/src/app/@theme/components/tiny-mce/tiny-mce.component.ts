@@ -3,7 +3,7 @@ import { Component, OnDestroy, AfterViewInit, Output, EventEmitter, ElementRef }
 declare var tinymce: any;
 
 @Component({
-  selector: 'ngx-tiny-mce',
+  selector: 'xcs-tiny-mce',
   template: '',
 })
 export class TinyMCEComponent implements OnDestroy, AfterViewInit {

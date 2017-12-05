@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { StateService } from '../../../@core/data/state.service';
 
 @Component({
-  selector: 'ngx-theme-settings',
+  selector: 'xcs-theme-settings',
   styleUrls: ['./theme-settings.component.scss'],
   template: `
     <h6>LAYOUTS</h6>

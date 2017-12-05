@@ -16,12 +16,12 @@ import 'rxjs/add/operator/delay';
 
 // TODO: move layouts into the framework
 @Component({
-  selector: 'ngx-sample-layout',
+  selector: 'xcs-sample-layout',
   styleUrls: ['./sample.layout.scss'],
   template: `
     <nb-layout [center]="layout.id === 'center-column'" windowMode>
       <nb-layout-header fixed>
-        <ngx-header [position]="sidebar.id === 'left' ? 'normal': 'inverse'"></ngx-header>
+        <xcs-header [position]="sidebar.id === 'left' ? 'normal': 'inverse'"></xcs-header>
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar"
@@ -49,7 +49,7 @@ import 'rxjs/add/operator/delay';
       </nb-layout-column>
 
       <nb-layout-footer fixed>
-        <ngx-footer></ngx-footer>
+        <xcs-footer></xcs-footer>
       </nb-layout-footer>
 
       <nb-sidebar class="settings-sidebar"
@@ -57,7 +57,7 @@ import 'rxjs/add/operator/delay';
                    state="collapsed"
                    fixed
                    [right]="sidebar.id !== 'right'">
-        <ngx-theme-settings></ngx-theme-settings>
+        <xcs-theme-settings></xcs-theme-settings>
       </nb-sidebar>
     </nb-layout>
   `,
