@@ -22,6 +22,7 @@ libs += [
         springBootConfigurationProcessor: "org.springframework.boot:spring-boot-configuration-processor",
         springBootStarter               : "org.springframework.boot:spring-boot-starter",
 
-        keycloakServer                  : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
+        keycloakServer                  : "org.wildfly.swarm:keycloak-server:2017.11.0",
+        keycloakServerSwarm                  : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
         keycloakSpringBootStarter       : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot"
 ]

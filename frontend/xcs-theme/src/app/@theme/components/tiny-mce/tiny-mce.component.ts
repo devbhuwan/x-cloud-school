@@ -1,5 +1,7 @@
 import { Component, OnDestroy, AfterViewInit, Output, EventEmitter, ElementRef } from '@angular/core';
 
+declare var tinymce: any;
+
 @Component({
   selector: 'ngx-tiny-mce',
   template: '',

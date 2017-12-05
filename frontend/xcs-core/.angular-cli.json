@@ -27,7 +27,9 @@
         "../node_modules/nebular-icons/scss/nebular-icons.scss",
         "./app/@theme/styles/styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/keycloak-js/dist/keycloak.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

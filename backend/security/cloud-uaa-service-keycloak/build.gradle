@@ -1,10 +1,11 @@
-//apply plugin: 'wildfly-swarm'
-//apply from: "$rootDir/gradle/docker.gradle"
+apply from: "$rootDir/gradle/docker.gradle"
+
+configurations {
+    lol
+}
 
 dependencies {
-    compile([
-//            libs.keycloakServer
-    ])
+    lol libs.keycloakServerSwarm
     compileOnly([
 
     ])
@@ -15,4 +16,11 @@ dependencies {
 
     testCompile([
     ])
+}
+
+
+task runKeycloakServer(type: Exec) {
+    def file = configurations.lol.files.getAt(0)
+    println file.getAbsolutePath()
+    commandLine 'java', '-jar', file.getAbsolutePath()
 }

@@ -5,4 +5,8 @@ export class LoggerService {
 
   constructor() { }
 
+  info(message: string) {
+
+  }
+
 }

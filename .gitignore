@@ -26,3 +26,9 @@ hs_err_pid*
 
 **/node_modules/
 *package-lock.json
+
+**/.idea/
+*.iml
+*.db
+**/build/
+**/out/
