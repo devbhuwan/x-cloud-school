@@ -6,7 +6,7 @@ import {AuthGuardService} from './keycloak/auth-guard.service';
 import {KeycloakService} from './keycloak/keycloak.service';
 
 
-export function xcsSecurityProviders() {
+function xcsSecurityProviders() {
   return [
     KeycloakService,
     AuthGuardService,
@@ -14,7 +14,7 @@ export function xcsSecurityProviders() {
   ];
 }
 
-export function xcsSecurityHttpInterceptor() {
+function xcsSecurityHttpInterceptor() {
   return {
     provide: HTTP_INTERCEPTORS,
     useFactory: (keycloakService: KeycloakService) => {

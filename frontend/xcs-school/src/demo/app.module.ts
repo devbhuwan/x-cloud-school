@@ -3,10 +3,11 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {XcsBpmModule} from '../app/xcs-bpm.module';
-import {SecurityModule} from '@xcs/xcs-core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-
+import {AppRoutingModule} from './app-routing.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NbAuthModule } from '@nebular/auth';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,14 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    XcsBpmModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    SecurityModule.forRoot()
+    AppRoutingModule,
+    NgbModule.forRoot(),
+    NbAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
