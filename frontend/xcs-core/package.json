@@ -1,11 +1,11 @@
 {
   "name": "xcs-core",
-  "version": "1.0.0",
+  "version":"1.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run build:pack && npm run build:copy",
+    "build": "npm run build:pack",
     "build:pack": "ng-packagr -p ng-package.json",
     "build:copy": "grunt copy src/assets dist/assets",
     "test": "ng test",

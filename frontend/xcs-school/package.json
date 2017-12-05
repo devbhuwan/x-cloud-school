@@ -35,7 +35,7 @@
     "roboto-fontface": "^0.8.0",
     "rxjs": "^5.5.2",
     "typeface-exo": "0.0.44",
-    "xcs-core": "^1.0.0",
+    "xcs-core": "^1.0.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

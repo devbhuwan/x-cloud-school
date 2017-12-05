@@ -8,5 +8,6 @@ export const environment = {
   KEYCLOAK_URL: 'http://localhost:8080/auth',
   KEYCLOAK_REALM: 'x-cloud-school',
   KEYCLOAK_CLIENTID: 'x-cloud-school-frontend',
-  BACKEND_URL: 'http://localhost:8000/api'
+  BACKEND_URL: 'http://localhost:8000/api',
+  isSecure: false
 };
