@@ -2,21 +2,24 @@
 # Bash Menu Script Example
 
 PS3='Please enter your choice: '
-options=("Normal Build" "Normal Build with skip tests" "Build with docker images" "Quit")
+options=("Normal Build" "Normal build and publish" "Run App" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
         "Normal Build")
             echo "you chose 'Normal Build'"
-            gradle clean build
+            npm run build
             ;;
-        "Normal Build with skip tests")
-            echo "you chose 'Normal Build with skip tests'"
-            gradle clean build -x test
+        "Normal build and publish")
+            echo "you chose 'Normal build and publish'"
+            printf 'New Version [] : '
+            read newVersion
+            sed -i -E "s/\"version\":.*[^,]/\"version\":\"${newVersion}\"/g" package.json
+            npm run build && cd dist/ && yarn publish
             ;;
-        "Build with docker images")
-            echo "you chose 'Build with docker images'"
-            gradle clean build copyDockerfile docker
+        "Run App")
+            echo "you chose 'Run App'"
+            npm run start
             ;;
         "Quit")
             break
