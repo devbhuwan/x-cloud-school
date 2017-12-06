@@ -3,12 +3,6 @@ apply from: "$rootDir/gradle/docker.gradle"
 //apply plugin: "com.ewerk.gradle.plugins.querydsl"
 apply plugin: "xcs.cloud.gradle.plugins.endpoints"
 
-buildscript {
-    dependencies {
-        classpath files("$rootDir/plugins/endpoints-plugin/build/libs/endpoints-plugin-${project.version}.jar")
-    }
-}
-
 dependencies {
     compile([
             libs.springBootStarterWeb,
