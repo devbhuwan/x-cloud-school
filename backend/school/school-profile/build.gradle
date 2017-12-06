@@ -1,5 +1,13 @@
 apply plugin: 'org.springframework.boot'
 apply from: "$rootDir/gradle/docker.gradle"
+//apply plugin: "com.ewerk.gradle.plugins.querydsl"
+apply plugin: "xcs.cloud.gradle.plugins.endpoints"
+
+buildscript {
+    dependencies {
+        classpath files("$rootDir/plugins/endpoints-plugin/build/libs/endpoints-plugin-${project.version}.jar")
+    }
+}
 
 dependencies {
     compile([
@@ -7,11 +15,8 @@ dependencies {
             libs.springBootStarterTest,
             project(":security:cloud-service-security-client")
     ])
-
     compileOnly([
-
     ])
-
 
 //        apt([
 //

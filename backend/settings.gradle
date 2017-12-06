@@ -1,4 +1,10 @@
 rootProject.name = 'backend-x-cloud-school'
+include 'archx:security-archx'
+findProject(':archx:security-archx')?.name = 'security-archx'
+
+include 'plugins:endpoints-plugin'
+findProject(':plugins:endpoints-plugin')?.name = 'endpoints-plugin'
+
 include 'security:cloud-uaa-service-keycloak'
 findProject(':security:cloud-uaa-service-keycloak')?.name = 'cloud-uaa-service-keycloak'
 include 'security:cloud-service-security-client'
@@ -9,6 +15,4 @@ include 'platform:cloud-api-gateway-service'
 findProject(':platform:cloud-api-gateway-service')?.name = 'cloud-api-gateway-service'
 include 'platform:cloud-service-discovery-service'
 findProject(':platform:cloud-service-discovery-service')?.name = 'cloud-service-discovery-service'
-include 'archx:security-archx'
-findProject(':archx:security-archx')?.name = 'security-archx'
 

@@ -6,7 +6,8 @@ versions += [
         scala             : "2.11",
         spark             : "2.2.0",
         keycloakSpringBoot: "3.4.0.Final",
-        lombok            : "1.16.18"
+        lombok            : "1.16.18",
+        queryDsl          : "4.1.3"
 ]
 
 libs += [
@@ -15,14 +16,13 @@ libs += [
         sparkMlLib                      : "org.apache.spark:spark-mllib_$versions.scala:$versions.spark",
         testNG                          : "org.testng:testng:6.9.4",
         lombok                          : "org.projectlombok:lombok:$versions.lombok",
-
         springBootStarterWeb            : "org.springframework.boot:spring-boot-starter-web",
-        springBootStarterTest         : "org.springframework.boot:spring-boot-starter-test",
+        springBootStarterTest           : "org.springframework.boot:spring-boot-starter-test",
         springBootAutoConfigure         : "org.springframework.boot:spring-boot-autoconfigure",
         springBootConfigurationProcessor: "org.springframework.boot:spring-boot-configuration-processor",
         springBootStarter               : "org.springframework.boot:spring-boot-starter",
-
         keycloakServer                  : "org.wildfly.swarm:keycloak-server:2017.11.0",
-        keycloakServerSwarm                  : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
-        keycloakSpringBootStarter       : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot"
+        keycloakServerSwarm             : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
+        keycloakSpringBootStarter       : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloakSpringBoot",
+        queryDslCore                    : "com.querydsl:querydsl-core:$versions.queryDsl"
 ]
