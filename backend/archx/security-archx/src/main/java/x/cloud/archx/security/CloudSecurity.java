@@ -1,4 +1,4 @@
-package x.cloud.security;
+package x.cloud.archx.security;
 
 
 public class CloudSecurity {

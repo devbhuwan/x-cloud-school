@@ -84,7 +84,8 @@ subprojects {
         ])
 
         testCompile([
-                libs.testNG
+                libs.testNG,
+                "org.hamcrest:hamcrest-core"
         ])
         testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
         testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")

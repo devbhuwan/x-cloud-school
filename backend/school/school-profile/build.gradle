@@ -1,7 +1,7 @@
 apply plugin: 'org.springframework.boot'
 apply from: "$rootDir/gradle/docker.gradle"
 //apply plugin: "com.ewerk.gradle.plugins.querydsl"
-apply plugin: "xcs.cloud.gradle.plugins.endpoints"
+apply plugin: xcs.cloud.gradle.plugins.EndpointsPlugin
 
 dependencies {
     compile([

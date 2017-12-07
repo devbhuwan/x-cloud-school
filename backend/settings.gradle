@@ -1,6 +1,10 @@
 rootProject.name = 'backend-x-cloud-school'
 include 'archx:security-archx'
 findProject(':archx:security-archx')?.name = 'security-archx'
+include 'archx:endpoints-archx'
+findProject(':archx:endpoints-archx')?.name = 'endpoints-archx'
+include 'codegen:endpoints-archx-codegen'
+findProject(':codegen:endpoints-archx-codegen')?.name = 'endpoints-archx-codegen'
 
 include 'plugins:endpoints-plugin'
 findProject(':plugins:endpoints-plugin')?.name = 'endpoints-plugin'
