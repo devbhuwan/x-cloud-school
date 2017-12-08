@@ -1,26 +1,71 @@
-apply from: "$rootDir/gradle/docker.gradle"
-
-configurations {
-    lol
-}
-
-dependencies {
-    lol libs.keycloakServerSwarm
-    compileOnly([
-
-    ])
-
-//        apt([
+//buildscript {
 //
-//        ])
-
-    testCompile([
-    ])
-}
-
-
-task runKeycloakServer(type: Exec) {
-    def file = configurations.lol.files.getAt(0)
-    println file.getAbsolutePath()
-    commandLine 'java', '-jar', file.getAbsolutePath()
-}
+//    ext {
+//        springBootVersion = '1.5.8.RELEASE'
+//    }
+//
+//    repositories {
+//        mavenCentral()
+//        mavenLocal()
+//        jcenter()
+//        "https://plugins.gradle.org/m2/,http://repo.spring.io/plugins-release,http://repo.spring.io/milestone/".split(",")
+//                .each { repoUrl -> maven { url repoUrl } }
+//    }
+//
+//    dependencies {
+//        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+//        classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
+//        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
+//    }
+//
+//}
+//
+//apply from: "$rootDir/gradle/docker.gradle"
+//apply plugin: 'org.springframework.boot'
+//
+//dependencies {
+//    compile([
+//            "org.springframework.boot:spring-boot-starter-web",
+//            "org.springframework.boot:spring-boot-starter-jdbc",
+//            "com.h2database:h2",
+//            "org.freemarker:freemarker",
+//            "org.kie:kie-internal:6.4.0.Final",
+//            "org.kie:kie-ci:6.4.0.Final",
+//            "org.hibernate:hibernate-core:5.2.10.Final"
+//
+//    ])
+//    [
+//            'keycloak-model-jpa',
+//            'keycloak-model-infinispan',
+//            'keycloak-ldap-federation',
+//            'keycloak-kerberos-federation',
+//            'keycloak-saml-core',
+//            'keycloak-sssd-federation',
+//            'keycloak-authz-policy-common',
+//            'keycloak-authz-policy-drools',
+//            'keycloak-themes',
+//
+//    ].each { m ->
+//        compile("org.keycloak:${m}:${versions.keycloakServer}")
+//    }
+//
+//    compile "org.jboss.resteasy:async-http-servlet-3.0:3.0.16.Final"
+//    compile "org.jboss.resteasy:resteasy-jackson2-provider:$versions.restEasy"
+//    compile "org.jboss.resteasy:resteasy-servlet-initializer:$versions.restEasy"
+//    compile "org.jboss.resteasy:resteasy-jaxb-provider:$versions.restEasy"
+//    apt([
+//            "org.springframework.boot:spring-boot-configuration-processor"
+//    ])
+//    testCompile([
+//            "org.springframework.boot:spring-boot-starter-test:1.5.8.RELEASE"
+//    ])
+//}
+//
+//
+//compileJava.dependsOn(processResources)
+//
+//dependencyManagement {
+//    imports {
+//        mavenBom "org.keycloak:keycloak-dependencies-server-all:3.4.0.Final"
+//    }
+//}

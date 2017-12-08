@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: sa
+    url: jdbc:h2:./data/keycloak
+
+server:
+  port: 8080
+
+resteasy:
+  deployment:
+    async_job_service_enabled: true
+
+keycloak:
+  server:
+    contextPath: /auth

@@ -9,8 +9,6 @@ findProject(':codegen:endpoints-archx-codegen')?.name = 'endpoints-archx-codegen
 include 'plugins:endpoints-plugin'
 findProject(':plugins:endpoints-plugin')?.name = 'endpoints-plugin'
 
-include 'security:cloud-uaa-service-keycloak'
-findProject(':security:cloud-uaa-service-keycloak')?.name = 'cloud-uaa-service-keycloak'
 include 'security:cloud-service-security-client'
 findProject(':security:cloud-service-security-client')?.name = 'cloud-service-security-client'
 include 'school:school-profile'
