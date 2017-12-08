@@ -1,0 +1,19 @@
+cloud:
+  service:
+    security:
+      enable: true
+      keycloak:
+        server:
+          realm: master
+          grant-type: password
+          server-url: http://localhost:8080/auth
+          client-secret: 1f37153d-3e40-41d3-85cb-00e4ff63652c
+          client-id: admin-cli
+          username: admin
+          password: admin
+        client-representation:
+          client-id: 1ok122323334
+          name: 1hello22323432
+          authorization-services-enabled: true
+          service-accounts-enabled: true
+

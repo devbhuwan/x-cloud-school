@@ -2,18 +2,22 @@ dependencies {
     compile([
             libs.springBootAutoConfigure,
             project(":archx:security-archx"),
-            "org.springframework.boot:spring-boot-starter-security"
+            "org.springframework.boot:spring-boot-starter-security",
+            libs.keycloakAdminClient
     ])
+// https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client
+    compile group: 'org.jboss.resteasy', name: 'resteasy-client', version: '3.1.4.Final'
+// https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson2-provider
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version: '3.1.4.Final'
 
     compileOnly([
-        libs.springBootConfigurationProcessor
+
     ])
-
-//        apt([
-//
-//        ])
-
+    apt([
+            "org.springframework.boot:spring-boot-configuration-processor"
+    ])
     testCompile([
+            "org.springframework.boot:spring-boot-starter-test"
     ])
 }
 

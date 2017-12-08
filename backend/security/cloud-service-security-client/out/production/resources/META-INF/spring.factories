@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  x.cloud.school.security.CloudServiceSecurityAutoConfiguration
+  x.cloud.school.security.CloudSecurityAutoConfiguration
