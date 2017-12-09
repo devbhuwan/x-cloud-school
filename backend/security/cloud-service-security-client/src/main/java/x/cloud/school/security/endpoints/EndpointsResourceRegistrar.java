@@ -68,7 +68,7 @@ public class EndpointsResourceRegistrar {
     private ResourceServerRepresentation buildDefaultResourceServerRepresentation() {
         ResourceServerRepresentation resourceServerRepresentation = new ResourceServerRepresentation();
         resourceServerRepresentation.setAllowRemoteResourceManagement(true);
-        resourceServerRepresentation.setName("Yes");
+        resourceServerRepresentation.setName(keycloakProperties.getClientRepresentation().getAuthorizationSettings().getName());
         resourceServerRepresentation.setClientId(keycloakProperties.getClientRepresentation().getClientId());
         return resourceServerRepresentation;
     }
