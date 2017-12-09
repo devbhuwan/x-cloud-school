@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-gradle clean runKeycloakServer
+mvn clean install
+cd target
+java -jar cloud-uaa-service-keycloak-1.0-SNAPSHOT.jar
