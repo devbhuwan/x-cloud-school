@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,8 +21,10 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
         <keycloak.version>3.4.0.Final</keycloak.version>
-        <resteasy.version>3.0.16.Final</resteasy.version>
+        <resteasy.async.http.version>3.0.19.Final</resteasy.async.http.version>
+        <resteasy.version>3.1.4.Final</resteasy.version>
     </properties>
 
     <dependencies>
@@ -35,7 +37,7 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>async-http-servlet-3.0</artifactId>
-            <version>${resteasy.version}</version>
+            <version>${resteasy.async.http.version}</version>
         </dependency>
 
         <dependency>
@@ -58,7 +60,7 @@
 
         <dependency>
             <groupId>org.keycloak</groupId>
-                <artifactId>keycloak-model-infinispan</artifactId>
+            <artifactId>keycloak-model-infinispan</artifactId>
             <version>${keycloak.version}</version>
         </dependency>
 

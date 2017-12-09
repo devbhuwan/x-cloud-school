@@ -5,9 +5,10 @@ ext {
 versions += [
         scala   : "2.11",
         spark   : "2.2.0",
-        keycloak: "2.5.5.Final",
+        keycloak: "3.4.0.Final",
         lombok  : "1.16.18",
-        queryDsl: "4.1.3"
+        queryDsl: "4.1.3",
+        restEasy: "3.1.4.Final"
 ]
 
 libs += [
@@ -25,5 +26,7 @@ libs += [
         keycloakServerSwarm             : "org.wildfly.swarm.servers:keycloak:2017.11.0:swarm",
         keycloakSpringBootStarter       : "org.keycloak:keycloak-spring-boot-starter:$versions.keycloak",
         keycloakAdminClient             : "org.keycloak:keycloak-admin-client:$versions.keycloak",
-        queryDslCore                    : "com.querydsl:querydsl-core:$versions.queryDsl"
+        queryDslCore                    : "com.querydsl:querydsl-core:$versions.queryDsl",
+        resteasyClient                  : "org.jboss.resteasy:resteasy-client:$versions.restEasy",
+        resteasyJackson2Provider        : "org.jboss.resteasy:resteasy-jackson2-provider:$versions.restEasy"
 ]
