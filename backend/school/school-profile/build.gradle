@@ -5,9 +5,11 @@ apply plugin: xcs.cloud.gradle.plugins.EndpointsPlugin
 
 dependencies {
     compile([
-            libs.springBootStarterWeb,
-            libs.springBootStarterTest,
-            project(":security:cloud-service-security-client")
+            'org.springframework.boot:spring-boot-starter-webflux',
+            "org.springframework.data:spring-data-cassandra",
+
+            project(":security:cloud-service-security-client"),
+            project(":archx:endpoints-archx")
     ])
     compileOnly([
     ])
@@ -17,5 +19,7 @@ dependencies {
 //        ])
 
     testCompile([
+            'org.springframework.boot:spring-boot-starter-test',
+            'io.projectreactor.addons:reactor-test'
     ])
 }

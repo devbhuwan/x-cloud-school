@@ -2,11 +2,11 @@ package xcs.cloud.gradle.plugins
 
 class EndpointsPluginExtension {
 
-    static String HIBERNATE_PROC = "hibernate.HibernateAnnotationProcessor"
+    static String ENDPOINT_PROC = "x.cloud.archx.endpoints.apt.WebFluxEndpointAnnotationProcessor"
 
     static final String NAME = "endpoints"
     static final String DEFAULT_ENDPOINTS_SOURCES_DIR = "src/endpoints/java"
-    static final String DEFAULT_LIBRARY = "com.:-apt:4.1.3"
+    static final String DEFAULT_LIBRARY = "io.github.devbhuwan:endpoints-archx-codegen:1.0-SNAPSHOT"
 
     String endpointsSourcesDir = DEFAULT_ENDPOINTS_SOURCES_DIR
     String library = DEFAULT_LIBRARY
@@ -18,7 +18,7 @@ class EndpointsPluginExtension {
         List processors = []
 
         if (webflux) {
-            processors << HIBERNATE_PROC
+            processors << ENDPOINT_PROC
         }
 
         return processors.join(",")
