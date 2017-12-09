@@ -13,12 +13,9 @@ public class EndpointsCollector {
 
     public static List<ResourceRepresentation> toResources(List<EndpointDTO> endpoints,
                                                            CloudSecurityProperties.KeycloakProperties keycloakProperties) {
-        final ResourceOwnerRepresentation resourceOwnerRepresentation = new ResourceOwnerRepresentation();
-        resourceOwnerRepresentation.setName(keycloakProperties.getClientRepresentation().getClientId());
         return endpoints.stream().map(endpointDTO -> {
             ResourceRepresentation resourceRepresentation = new ResourceRepresentation();
             resourceRepresentation.setName(endpointDTO.getName());
-            resourceRepresentation.setOwner(resourceOwnerRepresentation);
             resourceRepresentation.setUri(endpointDTO.getUri());
             resourceRepresentation.setType("");
             return resourceRepresentation;
