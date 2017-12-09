@@ -1,3 +1,7 @@
 spring:
   application:
     name: school-profile
+  data:
+    cassandra:
+      keyspace-name: sample
+      port: 9142

@@ -4,13 +4,16 @@ apply from: "$rootDir/gradle/docker.gradle"
 apply plugin: xcs.cloud.gradle.plugins.EndpointsPlugin
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-webflux') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
     compile([
-            'org.springframework.boot:spring-boot-starter-webflux',
+            "com.google.guava:guava:19.0",
             "org.springframework.data:spring-data-cassandra",
-
             project(":security:cloud-service-security-client"),
             project(":archx:endpoints-archx")
     ])
+
     compileOnly([
     ])
 
@@ -20,6 +23,7 @@ dependencies {
 
     testCompile([
             'org.springframework.boot:spring-boot-starter-test',
-            'io.projectreactor.addons:reactor-test'
+            'io.projectreactor.addons:reactor-test:3.1.0.M1',
+            'org.cassandraunit:cassandra-unit-spring:3.3.0.2'
     ])
 }

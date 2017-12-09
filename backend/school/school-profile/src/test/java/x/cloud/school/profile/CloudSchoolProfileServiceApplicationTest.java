@@ -1,16 +1,12 @@
 package x.cloud.school.profile;
 
+import org.cassandraunit.spring.CassandraDataSet;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
 
 @DisplayName("Cloud School Profile Service Application")
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = CloudSchoolProfileServiceApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class CloudSchoolProfileServiceApplicationTest {
+@CassandraDataSet(keyspace = "sample", value = {"dataset.cql"})
+public class CloudSchoolProfileServiceApplicationTest extends AbstractCassandraEmbeddedTest {
 
     @Test
     @DisplayName("")
