@@ -3,6 +3,7 @@ buildscript {
     ext {
         springBootVersion = '2.0.0.M7'
         springCloudVersion = 'Finchley.M4'
+        cfAppVersion = '2.0.0-RC1'
     }
 
     repositories {
@@ -25,6 +26,7 @@ buildscript {
         classpath "gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.9"
         classpath "$project.group:endpoints-plugin:$project.version"
         classpath 'io.spring.gradle:propdeps-plugin:0.0.9.RELEASE'
+        classpath("com.github.pivotalservices:ya-cf-app-gradle-plugin:${cfAppVersion}")
     }
 
 }
