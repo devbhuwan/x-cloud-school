@@ -7,5 +7,7 @@ repos += [
         springLibMilestone: "https://repo.spring.io/libs-milestone",
         springMilestone   : "http://repo.spring.io/milestone/",
         springLibSnapshots: "https://repo.spring.io/libs-snapshot",
-        gradlePlugin      : "https://plugins.gradle.org/m2/"
+        gradlePlugin      : "https://plugins.gradle.org/m2/",
+        cucumberJunit5 : "https://oss.sonatype.org/content/repositories/snapshots"
+
 ]

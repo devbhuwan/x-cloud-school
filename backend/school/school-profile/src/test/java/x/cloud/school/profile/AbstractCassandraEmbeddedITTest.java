@@ -17,5 +17,5 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
         DependencyInjectionTestExecutionListener.class,
         CassandraUnitTestExecutionListener.class})
 @EmbeddedCassandra
-public class AbstractCassandraEmbeddedTest {
+public class AbstractCassandraEmbeddedITTest {
 }

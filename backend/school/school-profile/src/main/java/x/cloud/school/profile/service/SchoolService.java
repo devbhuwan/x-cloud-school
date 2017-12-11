@@ -12,4 +12,6 @@ public interface SchoolService {
     Mono<School> save(School school);
 
     Flux<School> findSchoolsStartingWith(String letter);
+
+    Flux<School> findAll();
 }

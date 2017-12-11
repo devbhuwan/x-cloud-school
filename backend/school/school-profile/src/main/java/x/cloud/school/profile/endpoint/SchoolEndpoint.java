@@ -37,7 +37,11 @@ public class SchoolEndpoint {
     public Flux<School> findSchoolsWithLetter(
             @PathVariable("letter") String letter) {
         return this.schoolService.findSchoolsStartingWith(letter);
+    }
 
+    @GetMapping
+    public Flux<School> findSchools() {
+        return this.schoolService.findAll();
     }
 
 }
