@@ -9,7 +9,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NbAuthModule} from '@nebular/auth';
 import {SecurityModule} from 'xcs-core';
-import {SchoolPagesModule} from '../app/pages/school-pages.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import {SchoolPagesModule} from '../app/pages/school-pages.module';
     AppRoutingModule,
     NgbModule.forRoot(),
     NbAuthModule.forRoot(),
-    SecurityModule.forRoot(),
-    SchoolPagesModule.forRoot()
+    SecurityModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
