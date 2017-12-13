@@ -1,6 +1,10 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
   "lib": {
-    "entryFile": "./src/app/index.ts"
+    "entryFile": "./src/app/index.ts",
+    "externals": {
+      "react": "React",
+      "react-dom": "ReactDOM"
+    }
   }
 }

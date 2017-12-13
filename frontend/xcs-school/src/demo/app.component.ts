@@ -4,10 +4,6 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'xcs-app',
   template: `
-    <button (click)="retrieveData()"
-            style="width: 560px!important; height: 60px!important;
-            background: yellow">SECURE REST TEST
-    </button>
     <router-outlet></router-outlet>`
 })
 export class AppComponent {

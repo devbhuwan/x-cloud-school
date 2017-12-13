@@ -11,7 +11,6 @@ const PAGES_COMPONENTS = [
 
 @NgModule({
   imports: [
-    CommonModule,
     ThemeModule,
     PagesRoutingModule,
   ],

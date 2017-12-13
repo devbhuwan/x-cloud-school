@@ -8,7 +8,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NbAuthModule} from '@nebular/auth';
-import {SecurityModule} from 'xcs-core';
+import {SecurityModule, ThemeModule} from 'xcs-core';
+import {FormioModule} from 'angular-formio';
+import { XcsCoreModule } from 'xcs-core';
+import { CoreModule } from 'xcs-core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,8 +23,13 @@ import {SecurityModule} from 'xcs-core';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    XcsCoreModule,
     NgbModule.forRoot(),
-    NbAuthModule.forRoot(),
+    ThemeModule.forRoot(),
+    CoreModule.forRoot(),
+    SecurityModule.forRoot(),
+    ReactiveFormsModule,
+     FormioModule,
     SecurityModule.forRoot()
   ],
   providers: [],
