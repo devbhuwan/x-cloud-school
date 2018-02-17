@@ -1,0 +1,23 @@
+apply plugin: 'org.springframework.boot'
+apply from: "$rootDir/gradle/docker.gradle"
+
+dependencies {
+    compile([
+            libs.springBootStarterTest,
+            project(":security:cloud-service-security-client"),
+            "org.springframework.cloud:spring-cloud-starter-config",
+            "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+            "org.springframework.cloud:spring-cloud-starter-netflix-zuul"
+    ])
+
+    compileOnly([
+
+    ])
+
+//        apt([
+//
+//        ])
+
+    testCompile([
+    ])
+}

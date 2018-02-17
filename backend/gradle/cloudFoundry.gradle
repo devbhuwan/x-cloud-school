@@ -1,0 +1,22 @@
+apply plugin: 'cf-app'
+
+cfConfig {
+    //CF Details
+    ccHost = "api.run.pivotal.io"
+    org = "x-cloud-school"
+    space = "x-cloud-school"
+
+    //App Details
+    name = "${jar.baseName}"
+    host = "${jar.baseName}"
+    filePath = "${buildDir}/libs/${jar.archiveName}"
+    path = ""
+    domain = "${jar.baseName}"
+    instances = 1
+    memory = 512
+
+    //Env and services
+    buildpack = "https://github.com/cloudfoundry/java-buildpack.git"
+    environment = ["JAVA_OPTS": "-Djava.security.egd=file:/dev/./urandom", "SPRING_PROFILES_ACTIVE": "cloud"]
+    services = []
+}

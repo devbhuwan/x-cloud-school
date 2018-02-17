@@ -1,0 +1,49 @@
+apply plugin: "java"
+// apply plugin: "scala"
+apply plugin: "maven"
+
+sourceCompatibility = 1.8
+
+dependencies {
+//    compile libs.scala
+}
+
+// Create a jar with the source code
+task sourcesJar(type: Jar, dependsOn: classes) {
+    from sourceSets.main.allSource
+    classifier "sources"
+    extension "jar"
+}
+
+// Create a jar with the javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    from javadoc.destinationDir
+    classifier "javadoc"
+    extension "jar"
+}
+
+// Add configurations for extra artifacts
+configurations.create("sources")
+configurations.create("javadoc")
+configurations.archives {
+    extendsFrom configurations.sources
+    extendsFrom configurations.javadoc
+}
+
+// Add extra artifacts to be created during build
+artifacts {
+    sources(sourcesJar) {
+        // Weird Gradle quirk where type will be used for the extension, but only for sources
+        type "jar"
+    }
+    javadoc(javadocJar) {
+        type "javadoc"
+    }
+}
+javadoc.doFirst { println "" }
+
+// Add Provided Dependency Support
+configurations { compileOnly }
+sourceSets.main.compileClasspath += configurations.compileOnly
+sourceSets.test.compileClasspath += configurations.compileOnly
+sourceSets.test.runtimeClasspath += configurations.compileOnly

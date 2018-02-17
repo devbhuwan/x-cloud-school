@@ -1,0 +1,21 @@
+dependencies {
+    compile([
+            libs.springBootAutoConfigure,
+            project(":archx:security-archx"),
+            "org.springframework.boot:spring-boot-starter-security",
+            libs.keycloakAdminClient,
+            libs.resteasyClient,
+            libs.resteasyJackson2Provider
+    ])
+    compileOnly([
+
+    ])
+    apt([
+            "org.springframework.boot:spring-boot-configuration-processor"
+    ])
+    testCompile([
+            "org.springframework.boot:spring-boot-starter-test"
+    ])
+}
+
+compileJava.dependsOn(processResources)

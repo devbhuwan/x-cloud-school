@@ -1,0 +1,113 @@
+buildscript {
+
+    ext {
+        springBootVersion = '2.0.0.M7'
+        springCloudVersion = 'Finchley.M4'
+        cfAppVersion = '2.0.0-RC1'
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+        "https://plugins.gradle.org/m2/,http://repo.spring.io/plugins-release,http://repo.spring.io/milestone/".split(",")
+                .each { repoUrl -> maven { url repoUrl } }
+    }
+
+    dependencies {
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.9.0"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
+        classpath "org.wildfly.swarm:wildfly-swarm-gradle-plugin:2017.11.0"
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.13"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
+        classpath 'gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0'
+        classpath "gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:1.0.9"
+        classpath "$project.group:endpoints-plugin:$project.version"
+        classpath 'io.spring.gradle:propdeps-plugin:0.0.9.RELEASE'
+        classpath("com.github.pivotalservices:ya-cf-app-gradle-plugin:${cfAppVersion}")
+    }
+
+}
+
+apply from: "$rootDir/gradle/repositories.gradle"
+apply from: "$rootDir/gradle/dependencies.gradle"
+apply from: "$rootDir/gradle/artifacts.gradle"
+
+ext.junitPlatformVersion = '1.0.2'
+ext.junitJupiterVersion = '5.0.2'
+
+allprojects {
+    apply plugin: "idea"
+    apply plugin: 'jacoco'
+    apply plugin: 'propdeps'
+    apply plugin: 'propdeps-maven'
+    apply plugin: 'propdeps-idea'
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        repos.each { repoUrl -> maven { url repoUrl.value.toString() } }
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "maven"
+//    apply plugin: "maven-publish"
+//    // apply plugin: 'findbugs'
+//    apply plugin: 'project-report'
+//    apply plugin: 'signing'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: "net.ltgt.apt"
+    apply plugin: 'org.junit.platform.gradle.plugin'
+
+    sourceCompatibility = 1.8
+
+    compileJava {
+        options.encoding = "UTF-8"
+    }
+
+    sourceSets {
+        test {
+            java.srcDirs = ["src/test/java", "src/test/groovy"]
+        }
+    }
+
+    dependencies {
+        compile([
+                libs.lombok,
+                "org.slf4j:slf4j-api"
+        ])
+
+        compileOnly([
+
+        ])
+
+        apt([
+                libs.lombok
+        ])
+
+        testCompile([
+                libs.testNG,
+                "org.hamcrest:hamcrest-core"
+        ])
+        testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+        testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+        testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+        testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-starter-parent:${springBootVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+
+//    apply from: file("$rootDir/gradle/publishing.gradle")
+}
+
+// apply from: file("$rootDir/gradle/code-coverage.gradle")
+

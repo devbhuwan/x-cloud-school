@@ -1,0 +1,15 @@
+{
+  "hints": [
+    {
+      "name": "cloud.service.security.enable",
+      "values": [
+        {
+          "value": true
+        },
+        {
+          "value": false
+        }
+      ]
+    }
+  ]
+}

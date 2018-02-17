@@ -1,0 +1,16 @@
+#services:
+#  cloud-api-gateway-service:
+#    image: io.github.devbhuwan/cloud-api-gateway-service
+#  cloud-service-discovery-service:
+#    image: io.github.devbhuwan/cloud-service-discovery-service
+  school-profile-data:
+      image: cassandra:3.9
+  school-profile:
+    image: io.github.devbhuwan/school-profile
+    environment:
+      - SPRING_APPLICATION_NAME=school-profile
+      - SPRING_DATA_CASSANDRA_CONTACTPOINTS=school-profile-data
+      - SPRING_DATA_CASSANDRA_KEYSPACENAME=sample
+      - CREATE_KEYSPACE_SCRIPT=create-keyspace.cql
+    links:
+      - school-profile-data

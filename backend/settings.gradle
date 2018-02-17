@@ -1,0 +1,20 @@
+rootProject.name = 'backend-x-cloud-school'
+include 'archx:security-archx'
+findProject(':archx:security-archx')?.name = 'security-archx'
+include 'archx:endpoints-archx'
+findProject(':archx:endpoints-archx')?.name = 'endpoints-archx'
+include 'codegen:endpoints-archx-codegen'
+findProject(':codegen:endpoints-archx-codegen')?.name = 'endpoints-archx-codegen'
+
+include 'plugins:endpoints-plugin'
+findProject(':plugins:endpoints-plugin')?.name = 'endpoints-plugin'
+
+include 'security:cloud-service-security-client'
+findProject(':security:cloud-service-security-client')?.name = 'cloud-service-security-client'
+include 'school:school-profile'
+findProject(':school:school-profile')?.name = 'school-profile'
+include 'platform:cloud-api-gateway-service'
+findProject(':platform:cloud-api-gateway-service')?.name = 'cloud-api-gateway-service'
+include 'platform:cloud-service-discovery-service'
+findProject(':platform:cloud-service-discovery-service')?.name = 'cloud-service-discovery-service'
+

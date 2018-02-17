@@ -1,0 +1,34 @@
+apply plugin: 'org.springframework.boot'
+apply from: "$rootDir/gradle/docker.gradle"
+apply from: "$rootDir/gradle/cloudFoundry.gradle"
+//apply plugin: "com.ewerk.gradle.plugins.querydsl"
+apply plugin: xcs.cloud.gradle.plugins.EndpointsPlugin
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-webflux') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    compile([
+            "com.google.guava:guava:19.0",
+            "org.springframework.data:spring-data-cassandra",
+            //project(":security:cloud-service-security-client"),
+            project(":archx:endpoints-archx")
+    ])
+
+    compileOnly([
+    ])
+
+//        apt([
+//
+//        ])
+
+    testCompile([
+            'org.springframework.boot:spring-boot-starter-test',
+            'io.projectreactor.addons:reactor-test:3.1.0.M1',
+            'org.cassandraunit:cassandra-unit-spring:3.3.0.2',
+            "info.cukes:cucumber-spring:$versions.cucumber",
+            "info.cukes:cucumber-junit:$versions.cucumber",
+            "io.rest-assured:rest-assured"
+    ])
+}
